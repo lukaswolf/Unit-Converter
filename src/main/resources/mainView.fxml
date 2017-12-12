@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="280.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="pl.lukaszwilk.UnitConverter.controllers.MainController">
+   <children>
+      <Button fx:id="buttonWeight" layoutX="8.0" mnemonicParsing="false" prefHeight="128.0" prefWidth="128.0" text="weight" />
+      <Button fx:id="buttonLenght" layoutX="145.0" mnemonicParsing="false" prefHeight="128.0" prefWidth="128.0" text="lenght" />
+      <Button fx:id="buttonSpeed" layoutX="284.0" mnemonicParsing="false" prefHeight="128.0" prefWidth="128.0" text="speed" />
+      <Button fx:id="buttonPressure" layoutX="425.0" mnemonicParsing="false" prefHeight="128.0" prefWidth="128.0" text="pressure" />
+      <Button fx:id="buttonTime" layoutX="8.0" layoutY="140.0" mnemonicParsing="false" prefHeight="128.0" prefWidth="128.0" text="time" />
+      <Button fx:id="buttonEnergy" layoutX="562.0" layoutY="138.0" mnemonicParsing="false" prefHeight="128.0" prefWidth="128.0" text="energy" />
+      <Button fx:id="buttonVolume" layoutX="145.0" layoutY="138.0" mnemonicParsing="false" prefHeight="128.0" prefWidth="128.0" text="volume" />
+      <Button fx:id="buttonComputer" layoutX="562.0" mnemonicParsing="false" prefHeight="128.0" prefWidth="128.0" text="computer" />
+      <Button fx:id="buttonTemperature" layoutX="284.0" layoutY="138.0" mnemonicParsing="false" prefHeight="128.0" prefWidth="128.0" text="temperature" />
+      <Button fx:id="buttonSquare" layoutX="425.0" layoutY="138.0" mnemonicParsing="false" prefHeight="128.0" prefWidth="128.0" text="square" />
+   </children>
+</AnchorPane>
