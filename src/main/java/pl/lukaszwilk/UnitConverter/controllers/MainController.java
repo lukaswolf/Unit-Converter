@@ -33,7 +33,30 @@ public class MainController implements Initializable{
 
         buttonLenght.setOnMouseClicked(event -> tryIn());
         buttonTime.setOnMouseClicked(event -> enter());
+        buttonComputer.setOnMouseClicked(event -> in());
+        buttonPressure.setOnMouseClicked(event -> on());
 
+    }
+
+    private void on() {Parent root = null;
+        try {
+            root=FXMLLoader.load(getClass().getClassLoader().getResource("pressureView.fxml"));
+            Stage stage = (Stage) buttonPressure.getScene().getWindow();
+            stage.setScene(new Scene(root,600,580));
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
+
+
+    private void in() {Parent root = null;
+        try {
+            root=FXMLLoader.load(getClass().getClassLoader().getResource("itView.fxml"));
+            Stage stage = (Stage) buttonComputer.getScene().getWindow();
+            stage.setScene(new Scene(root,600,580));
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
     }
 
     private void enter() {Parent root = null;

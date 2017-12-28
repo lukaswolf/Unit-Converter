@@ -1,6 +1,5 @@
 package pl.lukaszwilk.UnitConverter.controllers;
 
-import javafx.application.Application;
 import javafx.beans.value.ChangeListener;
 import javafx.beans.value.ObservableValue;
 import javafx.collections.FXCollections;
@@ -8,24 +7,16 @@ import javafx.collections.ObservableList;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
-import javafx.fxml.JavaFXBuilderFactory;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.*;
-import javafx.scene.input.KeyEvent;
 import javafx.stage.Stage;
-import javafx.util.StringConverter;
-import javafx.util.converter.IntegerStringConverter;
 
 import pl.lukaszwilk.UnitConverter.models.Utils;
-import sun.awt.SunHints;
 
 import java.io.IOException;
 import java.net.URL;
-import java.nio.charset.Charset;
 import java.util.ResourceBundle;
-import java.util.function.UnaryOperator;
-import java.util.regex.Pattern;
 
 public class LenghtController  implements Initializable
 
@@ -40,10 +31,6 @@ public class LenghtController  implements Initializable
    TextField lenghtTextField;
     @FXML
     Button lenghtButtonConvert , lenghtButtonBack;
-
-
-
-
 
 
 
@@ -182,28 +169,27 @@ public class LenghtController  implements Initializable
 
 
    private void textConvertToNumbers1(){
-      lenghtTextField.textProperty().addListener(new ChangeListener<String>() {
-          @Override
-          public void changed(ObservableValue<? extends String> observable, String oldValue, String newValue) {
-               if (!newValue.matches("[0-9]{10}(\\.[0-9]*)?")){
-                   lenghtTextField.setText(newValue.replaceAll("[^\\d].",""));
-                   StringBuilder aus = new StringBuilder(newValue);
-                   boolean firstPointFound = false;
-                   for (int i = 0; i < aus.length(); i++){
-                       if(aus.charAt(i) == '.') {
-                           if(!firstPointFound)
-                               firstPointFound = true;
-                           else
-                               aus.deleteCharAt(i);
-                       }
-                   }
-                   newValue = aus.toString();
+    lenghtTextField.textProperty().addListener(new ChangeListener<String>() {
+        @Override
+        public void changed(ObservableValue<? extends String> observable, String oldValue, String newValue) {
+            if (!newValue.matches("[0-9]{10}(\\.[0-9]*)?")){
+                lenghtTextField.setText(newValue.replaceAll("[^\\d].",""));
+                StringBuilder aus = new StringBuilder(newValue);
+                boolean firstPointFound = false;
+                for (int i = 0; i < aus.length(); i++){
+                    if(aus.charAt(i) == '.') {
+                        if(!firstPointFound)
+                            firstPointFound = true;
+                        else
+                            aus.deleteCharAt(i);
+                    }
+                }
+                newValue = aus.toString();
 
-               }
-          }
-       });
+            }
+        }
+    });
    }
-
 
 
 }
