@@ -7,21 +7,21 @@
 <?import javafx.scene.layout.*?>
 
 <?import javafx.scene.text.Font?>
-<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="pl.lukaszwilk.UnitConverter.controllers.EnergyController">
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="pl.lukaszwilk.UnitConverter.controllers.VolumeController">
     <children>
-        <Button fx:id="enButtonBack" layoutX="14.0" layoutY="348.0" mnemonicParsing="false" text="Back">
+        <Button fx:id="volButtonBack" layoutX="14.0" layoutY="348.0" mnemonicParsing="false" text="Back">
             <font>
                 <Font size="18.0" />
             </font></Button>
-        <ChoiceBox fx:id="enChoiceBoxFrom" layoutX="245.0" layoutY="37.0" prefWidth="150.0" />
-        <ChoiceBox fx:id="enChoiceBoxTo" layoutX="246.0" layoutY="160.0" prefWidth="150.0" />
-        <Label fx:id="enLabel" layoutX="231.0" layoutY="274.0" prefHeight="53.0" prefWidth="278.0" wrapText="true">
+        <ChoiceBox fx:id="volChoiceBoxFrom" layoutX="245.0" layoutY="37.0" prefWidth="150.0" />
+        <ChoiceBox fx:id="volChoiceBoxTo" layoutX="246.0" layoutY="160.0" prefWidth="150.0" />
+        <Label fx:id="volLabel" layoutX="231.0" layoutY="274.0" prefHeight="53.0" prefWidth="278.0" wrapText="true">
             <font>
                 <Font size="28.0" />
             </font>
         </Label>
-        <TextField fx:id="enTextField" layoutX="231.0" layoutY="99.0" prefHeight="36.0" prefWidth="211.0" />
-        <Button fx:id="enButtonConvert" layoutX="253.0" layoutY="200.0" mnemonicParsing="false" text="Convert">
+        <TextField fx:id="volTextField" layoutX="231.0" layoutY="99.0" prefHeight="36.0" prefWidth="211.0" />
+        <Button fx:id="volButtonConvert" layoutX="253.0" layoutY="200.0" mnemonicParsing="false" text="Convert">
             <font>
                 <Font size="28.0" />
             </font></Button>

@@ -50,7 +50,7 @@ public class LenghtController  implements Initializable
         try {
             root= FXMLLoader.load(getClass().getClassLoader().getResource("mainView.fxml"));
             Stage stage = (Stage) lenghtButtonBack.getScene().getWindow();
-            stage.setScene(new Scene(root,700,280));
+            stage.setScene(new Scene(root,780,300));
         } catch (IOException e) {
             e.printStackTrace();
         }
@@ -95,11 +95,11 @@ public class LenghtController  implements Initializable
             lenghtLabel.setText("" + result + " Mm");
         }
         //Dm
-        if (lenghtChoiceBoxTo.getSelectionModel().getSelectedItem().equals("Dm")
-                && lenghtChoiceBoFrom.getSelectionModel().getSelectedItem().equals("Km")) {
+         if (lenghtChoiceBoFrom.getSelectionModel().getSelectedItem().equals("Dm") &&
+                 lenghtChoiceBoxTo.getSelectionModel().getSelectedItem().equals("M")) {
             Double result = Double.parseDouble(lenghtTextField.getText()) * 0.0001;
             lenghtLabel.setText("" + result + " Km");
-        } else if (lenghtChoiceBoxTo.getSelectionModel().getSelectedItem().equals("Dm")
+        }  if (lenghtChoiceBoxTo.getSelectionModel().getSelectedItem().equals("Dm")
                 && lenghtChoiceBoFrom.getSelectionModel().getSelectedItem().equals("M")) {
             double result = Double.parseDouble(lenghtTextField.getText()) * 0.01;
             lenghtLabel.setText("" + result + " M");
@@ -168,28 +168,9 @@ public class LenghtController  implements Initializable
     }
 
 
-   private void textConvertToNumbers1(){
-    lenghtTextField.textProperty().addListener(new ChangeListener<String>() {
-        @Override
-        public void changed(ObservableValue<? extends String> observable, String oldValue, String newValue) {
-            if (!newValue.matches("[0-9]{10}(\\.[0-9]*)?")){
-                lenghtTextField.setText(newValue.replaceAll("[^\\d].",""));
-                StringBuilder aus = new StringBuilder(newValue);
-                boolean firstPointFound = false;
-                for (int i = 0; i < aus.length(); i++){
-                    if(aus.charAt(i) == '.') {
-                        if(!firstPointFound)
-                            firstPointFound = true;
-                        else
-                            aus.deleteCharAt(i);
-                    }
-                }
-                newValue = aus.toString();
 
-            }
-        }
-    });
-   }
+
+
 
 
 }

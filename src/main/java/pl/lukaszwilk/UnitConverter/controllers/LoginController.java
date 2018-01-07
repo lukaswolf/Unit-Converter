@@ -43,7 +43,7 @@ public class LoginController implements Initializable {
         try {
             root = FXMLLoader.load(getClass().getClassLoader().getResource("mainView.fxml"));
             Stage stageRoot =(Stage) buttonLoginL.getScene().getWindow();
-            stageRoot.setScene(new Scene(root,700,280));
+            stageRoot.setScene(new Scene(root,780,300));
         } catch (IOException e) {
             e.printStackTrace();
         }
@@ -80,7 +80,7 @@ public class LoginController implements Initializable {
             try {
                 Parent root = FXMLLoader.load(getClass().getClassLoader().getResource("mainView.fxml"));
                 Stage stageRoot =(Stage) buttonLoginL.getScene().getWindow();
-                stageRoot.setScene(new Scene(root,700,280));
+                stageRoot.setScene(new Scene(root,780,300));
             } catch (IOException e) {
                 e.printStackTrace();
             }

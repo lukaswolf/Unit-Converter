@@ -41,7 +41,7 @@ public class ITController implements Initializable {
         try {
             root= FXMLLoader.load(getClass().getClassLoader().getResource("mainView.fxml"));
             Stage stage = (Stage) itButtonBack.getScene().getWindow();
-            stage.setScene(new Scene(root,700,280));
+            stage.setScene(new Scene(root,780,300));
         } catch (IOException e) {
             e.printStackTrace();
         }
